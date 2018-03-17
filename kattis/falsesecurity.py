@@ -11,7 +11,6 @@ msg=[]
 ch=''
 count=0
 c='start'
-c2=1
 
 c=raw_input()
 while True:
@@ -28,6 +27,9 @@ while True:
         elif(a==44):
             a=93
         elif(a==63):
+            a=94
+
+        msg+=(morse[a-65])
         leng.append(len(morse[a-65]))         #calculating lengths
 
     leng.reverse()
@@ -61,5 +63,3 @@ while True:
 
     except EOFError:
         sys.exit();
-
-    c2+=1
